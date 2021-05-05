@@ -1,0 +1,54 @@
+<html>
+   <head>
+      <!--Control C K to comment out blocks of code-->
+      <!-- Control K U to uncomment out blocks -->
+      <title>Squiz Matrix Example</title> 
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+      <link rel="stylesheet" type="text/css" href="style.css">
+   </head>
+   <body>
+      <div id = "app">
+         <h1>{{ message }}</h1>
+      </div>
+      
+      <div id = "app-2">
+         <span v-bind:title="Message">
+            Hover over mouse for a few seconds to see my title change!
+         </span>
+      </div>
+
+      <div id ="app-4">
+         <ol>
+            <li v-for = "todo in todos">
+               {{todo.text}}
+            </li>
+         </ol>
+      </div>
+      <p>This video is Helen Maroulis' qualifier match for the Olympics in Rio. She wins by touch pin.</p>
+      <div id = "trainingvids">
+         <video width="320" height="240" controls>
+            <source src = "MaroulisEdits.mp4"type = "video/mp4">
+         </video>
+      </div>
+      <a href = "techfall.pdf"><i>Download</i></a>
+     
+         <p>{{MEssage}}</p>
+         <button v-on:click="reverseMEssage">Download pdf</button>
+      </div>
+      
+      <!-- <iframe src="https://docs.google.com/document/d/e/2PACX-1vRSfnwGVMOrNR_bjeNB5feCbzQ-cUWBezfeL-Qr1py8wOkERPkh5X4HP2gzTffAfjKlsafGRt6FYBl8/pub?embedded=true"></iframe> -->
+      <div id="adobe-dc-view"></div>
+      <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+      <script type="text/javascript">
+         document.addEventListener("adobe_dc_view_sdk.ready", function(){ 
+            var adobeDCView = new AdobeDC.View({clientId: "e5699fe42a624cb48efa66976abe0b12", divId: "adobe-dc-view"});
+            adobeDCView.previewFile({
+               content:{location: {url: "https://res.cloudinary.com/elektra8875/image/upload/v1618263672/techfall_zom2wk.pdf"}},
+               metaData:{fileName: "techfall.pdf"}
+            }, {});
+         });
+       
+      </script>
+      <script src="app.js"></script>
+      </body>
+      </html>
