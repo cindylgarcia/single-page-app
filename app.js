@@ -36,3 +36,18 @@ var app5 = new Vue ({
       }
    
 })
+
+function leapyear(year) {
+   return year % 4==0 || (year % 4 == 0 && year % 100!=0)
+}
+
+function SeriesResistance(arr) {
+   let vm = arr.reduce((total, amount) => total + amount); 
+   if (vm <=1) {
+   return vm + " ohms"; 
+    
+}
+
+}
+
+const rangeOfNum = (a,b) => Array.from({length:b-a-1}, (_,i) => i + a +1);
