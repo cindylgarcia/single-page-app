@@ -36,6 +36,7 @@ var app5 = new Vue ({
       }
    
 })
+// Coding Challenges 
 
 function leapyear(year) {
    return year % 4==0 || (year % 4 == 0 && year % 100!=0)
@@ -51,3 +52,11 @@ function SeriesResistance(arr) {
 }
 
 const rangeOfNum = (a,b) => Array.from({length:b-a-1}, (_,i) => i + a +1);
+
+function rangeOfNum(start, end) {
+   let newArray = [];
+   for (let x = start + 1; x < end; x++) {
+      newArray.push(x)
+   }
+      return Arr;
+}
